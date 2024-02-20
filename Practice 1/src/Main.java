@@ -15,6 +15,5 @@ public class Main {
 
         System.out.print("luas balok anda adalah : " + luas);
 
-
     }
 }

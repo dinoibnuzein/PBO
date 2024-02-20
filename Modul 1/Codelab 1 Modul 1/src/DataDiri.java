@@ -12,7 +12,13 @@ public class DataDiri {
 
         System.out.print("Masukkan jenis kelamin (P/L): ");
         char jenisKelamin = scanner.next().charAt(0);
-        String jenisKelaminLengkap = (jenisKelamin == 'P') ? "Perempuan" : "Laki-laki";
+        String jenisKelaminLengkap;
+
+        if (jenisKelamin == 'P'){
+            jenisKelaminLengkap = "Perempuan";
+        } else {
+            jenisKelaminLengkap = "Laki-Laki";
+        }
 
         System.out.print("Masukkan tanggal lahir (YYYY-MM-DD): ");
         String tanggalLahirString = scanner.next();
@@ -21,15 +27,16 @@ public class DataDiri {
         // Hitung umur
         LocalDate hariIni = LocalDate.now();
         Period selisih = Period.between(tanggalLahir, hariIni);
-        int umur = selisih.getYears();
+        int umurtahun = selisih.getYears();
+        int umurbulan = selisih.getMonths();
 
         // Output data diri dan umur
         System.out.println("\n===== Data Diri =====");
-        System.out.println("Nama: " + nama);
-        System.out.println("Jenis Kelamin: " + jenisKelaminLengkap);
-        System.out.println("Tanggal Lahir: " + tanggalLahir);
-        System.out.println("Umur: " + umur + " tahun");
+        System.out.println("Nama Anda : " + nama);
+        System.out.println("Jenis Kelamin Anda: " + jenisKelaminLengkap);
+        System.out.println("Tanggal Lahir Anda: " + tanggalLahir);
+        System.out.print("Umur Anda : " + umurtahun + " tahun " + umurbulan + " bulan");
 
-        scanner.close();
+
     }
 }
