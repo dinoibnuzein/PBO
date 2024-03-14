@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
 
-public class DataDiri {
+public class Identitas {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -36,7 +36,5 @@ public class DataDiri {
         System.out.println("Jenis Kelamin Anda: " + jenisKelaminLengkap);
         System.out.println("Tanggal Lahir Anda: " + tanggalLahir);
         System.out.print("Umur Anda : " + umurtahun + " tahun " + umurbulan + " bulan");
-
-
     }
 }
